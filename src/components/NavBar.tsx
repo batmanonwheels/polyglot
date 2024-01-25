@@ -31,17 +31,17 @@ const NavBar = ({}: NavBarProps) => {
 		},
 	];
 	return (
-		<footer className='w-full h-20 flex justify-evenly gap-2 shadow-zinc-500 p-2 align-middle shadow-2xl'>
+		<footer className='w-full h-16 flex justify-evenly items-center gap-2 shadow-zinc-500 p-2 shadow-2xl'>
 			{buttons.map(({ link, icon, title }, i) => (
 				<Link
 					href={link}
-					className={`h-16 w-16 flex flex-col items-center gap-1 p-2  rounded-xl ${
+					className={`h-14 w-14 flex flex-col items-center p-2 rounded-xl ${
 						pathname === link ? 'bg-[#F8F6F8] border border-[#999999] ' : 'bg'
 					}`}
 					key={i}
 				>
-					<img src={icon} alt='Learn icon' className='h-8 w-8' />
-					<p className='font-bold text-sm'>{title}</p>
+					<img src={icon} alt='Learn icon' className='h-3/4 w-3/4' />
+					<p className='font-bold text-xs'>{title}</p>
 				</Link>
 			))}
 		</footer>

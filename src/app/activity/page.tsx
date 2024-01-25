@@ -1,19 +1,27 @@
 /* eslint-disable @next/next/no-img-element */
+import { Metadata } from 'next';
 import Header from '@/components/Header';
 import NavBar from '@/components/NavBar';
-import Card from '@/components/Card';
-import CarouselItem from '@/components/CarouselItem';
-import FeaturedLesson from '@/components/FeaturedLesson';
-import Carousel from '@/components/Carousel';
-import Image from 'next/image';
-import Link from 'next/link';
 import CourseSelector from '@/components/CourseSelector';
+
+export const metadata: Metadata = {
+	title: 'Activity | Polyglot',
+	description: 'Your passport to global communication!',
+	openGraph: {
+		title: 'Activity | Polyglot',
+		description: 'Your passport to global communication!',
+	},
+	twitter: {
+		title: 'Activity | Polyglot',
+		description: 'Your passport to global communication!',
+	},
+};
 
 export default function Activity() {
 	return (
 		<main className='flex max-h-screen max-w-[100vw] overflow-visible flex-col items-center justify-between '>
 			<Header text={'Activity'} />
-			<section className='h-[calc(100vh-160px)] w-full px-5 py-4 flex flex-col gap-4'>
+			<section className='h-[calc(100svh-7.5rem)] w-full px-5 py-2 flex flex-col gap-3'>
 				<CourseSelector />
 			</section>
 			<NavBar />

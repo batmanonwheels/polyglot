@@ -9,6 +9,7 @@ interface CarouselItemProps {
 	icon?: string;
 	link?: string;
 	type: 'lesson' | 'course';
+	className?: React.ComponentProps<'a'>['className'];
 }
 
 const CarouselItem = ({
@@ -23,12 +24,12 @@ const CarouselItem = ({
 		return (
 			<Link
 				href={link ? link : ''}
-				className='h-[100px] aspect-[3/2] text-center snap-center flex flex-col gap-3'
+				className='h-3/4 aspect-[3/2] text-center snap-center flex flex-col gap-1'
 			>
 				<img
 					src={image}
 					alt={title + ' image'}
-					className='w-full h-24 rounded-xl border'
+					className='w-full h-full rounded-xl border'
 				/>
 				<h2 className='w-full'>{title}</h2>
 			</Link>
@@ -36,21 +37,18 @@ const CarouselItem = ({
 	}
 
 	return (
-		<Link
-			href=''
-			className='h-full aspect-square relative text-center snap-start'
-		>
+		<Link href='' className='aspect-square relative text-center snap-start'>
 			<img src={image} alt='' className='absolute w-full h-full rounded-3xl' />
 			{icon && (
 				<img
 					src={icon}
-					className='absolute top-4 left-4 h-10 w-10'
+					className='absolute top-3 left-3 h-8 w-8'
 					alt={title + ' icon'}
 				/>
 			)}
-			<div className='absolute w-auto h-auto flex flex-col bottom-4 left-4 text-left'>
-				<h2 className='text-xl font-extrabold '>{title}</h2>
-				{subtitle && <p className='text-base'>{subtitle}</p>}
+			<div className='absolute inset-0 flex flex-col text-left justify-end pl-2 pb-3'>
+				<h2 className='text-base font-extrabold'>{title}</h2>
+				{subtitle && <p className='text-xs truncate'>{subtitle}</p>}
 			</div>
 		</Link>
 	);

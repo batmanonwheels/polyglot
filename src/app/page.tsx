@@ -11,9 +11,9 @@ import CourseSelector from '@/components/CourseSelector';
 
 export default function Home() {
 	return (
-		<main className='flex max-h-screen max-w-[100vw] overflow-hidden flex-col items-center justify-between relative'>
+		<main className='flex max-h-[100svh] max-w-[100vw] overflow-hidden flex-col  justify-between relative'>
 			<Header text={'Hi, Kathryn'} />
-			<section className='h-[calc(100vh-160px)] w-full px-5 py-4 flex flex-col gap-4'>
+			<section className='h-[calc(100svh-7.5rem)] w-full px-5 py-2 flex flex-col gap-3'>
 				<CourseSelector />
 				<FeaturedLesson
 					title='Lesson 1'
