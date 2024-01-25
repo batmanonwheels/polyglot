@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
+import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
 interface FeaturedLessonProps {
@@ -9,9 +10,14 @@ interface FeaturedLessonProps {
 	className?: React.ComponentProps<'div'>['className'];
 }
 
-const FeaturedLesson = ({ title, subtitle, image }: FeaturedLessonProps) => {
+const FeaturedLesson = ({
+	title,
+	subtitle,
+	image,
+	className,
+}: FeaturedLessonProps) => {
 	return (
-		<div className='w-full h-3/6 relative text-center '>
+		<div className={cn('w-full h-3/6 relative text-center', className)}>
 			<img
 				src={image}
 				alt={title + ' image'}

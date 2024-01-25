@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
+import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
 interface CarouselItemProps {
@@ -19,12 +20,16 @@ const CarouselItem = ({
 	icon,
 	type,
 	link,
+	className,
 }: CarouselItemProps) => {
 	if (type === 'course') {
 		return (
 			<Link
 				href={link ? link : ''}
-				className='h-3/4 aspect-[3/2] text-center snap-center flex flex-col gap-1'
+				className={cn(
+					'h-3/4 aspect-[3/2] text-center snap-center flex flex-col gap-1',
+					className
+				)}
 			>
 				<img
 					src={image}
