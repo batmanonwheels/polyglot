@@ -1,19 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
+import Header from '@/components/Header';
+import CourseSelector from '@/components/CourseSelector';
 import Card from '@/components/Card';
 import CarouselItem from '@/components/CarouselItem';
 import FeaturedLesson from '@/components/FeaturedLesson';
-import Header from '@/components/Header';
 import Carousel from '@/components/Carousel';
 import NavBar from '@/components/NavBar';
 import Image from 'next/image';
 import Link from 'next/link';
-import CourseSelector from '@/components/CourseSelector';
 
 export default function Home() {
 	return (
-		<main className='flex max-h-[100svh] max-w-[100vw] overflow-hidden flex-col  justify-between relative'>
+		<main className='flex max-h-[100svh] max-w-[100vw] overflow-hidden flex-col justify-between relative'>
 			<Header text={'Hi, Kathryn'} />
-			<section className='h-[calc(100svh-7.5rem)] w-full px-5 py-2 flex flex-col gap-3'>
+			<section className='h-[calc(100svh-8rem)] w-full px-5 py-2 flex flex-col gap-3'>
 				<CourseSelector />
 				<FeaturedLesson
 					title='Lesson 1'
