@@ -31,7 +31,7 @@ const NavBar = ({}: NavBarProps) => {
 		},
 	];
 	return (
-		<footer className='w-full h-16 flex justify-evenly items-center gap-2 shadow-zinc-500 p-2 shadow-2xl'>
+		<footer className='flex items-center w-full h-16 p-2 shadow-2xl justify-evenly gap-2 shadow-zinc-500'>
 			{buttons.map(({ link, icon, title }, i) => (
 				<Link
 					href={link}
@@ -40,8 +40,8 @@ const NavBar = ({}: NavBarProps) => {
 					}`}
 					key={i}
 				>
-					<img src={icon} alt='Learn icon' className='h-3/4 w-3/4' />
-					<p className='font-bold text-xs'>{title}</p>
+					<img src={icon} alt='Learn icon' className='w-3/4 h-3/4 ' />
+					<p className='text-xs font-bold'>{title}</p>
 				</Link>
 			))}
 		</footer>

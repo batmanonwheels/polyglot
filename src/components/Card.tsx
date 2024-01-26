@@ -5,31 +5,35 @@ import Link from 'next/link';
 
 interface CardProps {
 	title?: string;
+	link?: string;
 	image: string;
 	icon?: string;
 	className?: React.ComponentProps<'a'>['className'];
 }
 
-const Card = ({ title, image, icon, className }: CardProps) => {
+const Card = ({ title, link, image, icon, className }: CardProps) => {
 	return (
 		<Link
-			href=''
-			className={cn('w-auto h-1/4 relative text-center', className)}
+			href={link ? link : ''}
+			className={cn(
+				'w-auto h-1/4 relative grid grid-flow-row grid-rows-2 p-4',
+				className
+			)}
 		>
 			<img
 				src={image}
 				alt={title + ' image'}
-				className='absolute w-full h-full rounded-3xl'
+				className='absolute w-full h-full rounded-3xl -z-10'
 			/>
 			{icon && (
 				<img
 					src={icon}
-					className='absolute top-4 left-4 h-12 w-12'
+					className='row-start-1 w-12 h-12 rounded-full'
 					alt={title + ' icon'}
 				/>
 			)}
 			{title && (
-				<h2 className='absolute text-3xl font-bold bottom-2 left-4 text-left text-white'>
+				<h2 className='row-start-2 flex flex-col align-bottom justify-end text-3xl font-bold text-left text-white'>
 					{title}
 				</h2>
 			)}

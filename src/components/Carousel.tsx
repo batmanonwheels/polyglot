@@ -13,7 +13,7 @@ const Carousel = ({ id, className, children }: CarouselProps) => {
 		<div
 			id={id}
 			className={cn(
-				'flex w-full overflow-x-scroll overflow-y-hidden h-1/5 gap-4 snap-x',
+				'grid grid-flow-col grid-cols-[repeat(4,_40%)] w-full overflow-x-scroll overflow-y-hidden h-36 gap-4 snap-x',
 				className
 			)}
 		>
