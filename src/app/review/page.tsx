@@ -26,7 +26,7 @@ export default function Review() {
 			<section className='h-[calc(100svh-8rem)] w-full px-5 py-2 flex flex-col gap-3'>
 				<CourseSelector />
 				<div className='flex flex-col h-1/2 gap-2'>
-					<h2 className='text-2xl font-bold flex-1'>Practice Tools</h2>
+					<h2 className='flex-1 text-2xl font-bold'>Practice Tools</h2>
 					<Card
 						className='h-1/2'
 						title='Conversation'

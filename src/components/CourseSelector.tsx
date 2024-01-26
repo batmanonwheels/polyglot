@@ -3,8 +3,6 @@
 import Carousel from './Carousel';
 import CarouselItem from './CarouselItem';
 
-//import
-
 interface CourseSelectorProps {}
 
 const CourseSelector = ({}: CourseSelectorProps) => {
@@ -19,13 +17,13 @@ const CourseSelector = ({}: CourseSelectorProps) => {
 	return (
 		<div
 			id='course-selector'
-			className='hidden absolute left-0 top-16 z-10 sm:hidden'
+			className='absolute left-0 z-10 hidden top-16 sm:hidden'
 		>
 			<div
 				className='w-screen h-[100svh] z-10'
 				onClick={() => toggleCourseSelector()}
 			/>
-			<Carousel className='fixed left-0 top-16 h-32 z-20 px-5 bg-white sm:hidden shadow-md'>
+			<Carousel className='flex w-full fixed left-0 z-20 px-5 bg-white shadow-md top-16 h-[15%] sm:hidden'>
 				<CarouselItem
 					type='course'
 					title='Español'
