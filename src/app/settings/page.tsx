@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function Setttings() {
 	return (
 		<main className='flex max-h-[100svh] max-w-[100vw] overflow-visible flex-col items-center justify-between '>
-			<Header text={'Kathryn'} profile={true} />
+			<Header text={'Settings'} profile={true} />
 			<section className='h-[calc(100svh-8rem)] w-full px-5 py-2 flex flex-col gap-3'>
 				<CourseSelector />
 			</section>
