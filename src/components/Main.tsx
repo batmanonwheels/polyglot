@@ -1,11 +1,21 @@
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
 interface MainProps {
-  className?: React.ComponentProps<"div">["className"];
-  children: React.ReactNode;
+	className?: React.ComponentProps<'div'>['className'];
+	children: React.ReactNode;
 }
 
-export const Main = ({className, children}: MainProps) => {
+const Main = ({ className, children }: MainProps) => {
+	return (
+		<main
+			className={cn(
+				'relative flex max-h-[100svh] max-w-[100vw] flex-col justify-between overflow-hidden md:max-h-none',
+				className
+			)}
+		>
+			{children}
+		</main>
+	);
+};
 
-	return(<section className={cn("flex h-[calc(100svh-8rem)] w-full flex-col gap-3 px-5 py-2 md:h-[calc(100svh-5rem)] max-w-7xl mx-auto ", className)}>{children}</section>)
-}
+export default Main;

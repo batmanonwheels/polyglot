@@ -3,7 +3,8 @@ import { Metadata } from "next";
 import Header from "@/components/Header";
 import CourseSelector from "@/components/CourseSelector";
 import Footer from "@/components/Footer";
-import { Main } from "@/components/Main";
+import Content from "@/components/Content";
+import Main from "@/components/Main";
 
 export const metadata: Metadata = {
   title: "Explore | Polyglot",
@@ -20,12 +21,12 @@ export const metadata: Metadata = {
 
 export default function Explore() {
   return (
-    <main className="relative flex max-h-[100svh] max-w-[100vw] flex-col justify-between overflow-hidden md:max-h-[140svh]">
+    <Main>
       <Header text={"Explore"} />
-      <Main className="flex h-[calc(100svh-8rem)] w-full flex-col gap-3 px-5 py-2">
+      <Content className="flex h-[calc(100svh-8rem)] w-full flex-col gap-3 px-5 py-2">
         <CourseSelector />
-      </Main>
+      </Content>
       <Footer />
-    </main>
+    </Main>
   );
 }

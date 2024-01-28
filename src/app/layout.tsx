@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className + "box-border m-auto"}>{children}</body>
+      <body className={inter.className + "m-auto box-border"}>{children}</body>
     </html>
   );
 }

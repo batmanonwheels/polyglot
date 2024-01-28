@@ -3,6 +3,9 @@ import { Metadata } from "next";
 import Header from "@/components/Header";
 import CourseSelector from "@/components/CourseSelector";
 import Footer from "@/components/Footer";
+import Content from "@/components/Content";
+import Main from "@/components/Main";
+
 
 export const metadata: Metadata = {
   title: "Setttings | Polyglot",
@@ -19,12 +22,12 @@ export const metadata: Metadata = {
 
 export default function Setttings() {
   return (
-    <main className="flex max-h-[100svh] max-w-[100vw] flex-col items-center justify-between overflow-visible md:max-h-[140svh]">
+    <Main className="flex max-h-[100svh] max-w-[100vw] flex-col items-center justify-between overflow-visible md:max-h-none">
       <Header text={"Settings"} profile={true} />
-      <section className="flex h-[calc(100svh-8rem)] w-full flex-col gap-3 px-5 py-2">
+      <Content>
         <CourseSelector />
-      </section>
+      </Content>
       <Footer />
-    </main>
+    </Main>
   );
 }
