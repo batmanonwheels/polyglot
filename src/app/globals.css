@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-	--foreground-rgb: #ffffff;
-	--background-start-rgb: ;
-	--background-end-rgb: ;
+  --foreground-rgb: #ffffff;
+  --background-start-rgb: ;
+  --background-end-rgb: ;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -17,12 +17,12 @@
 } */
 
 body {
-	color: rgb(var(--foreground-rgb));
-	background: rgb(var(--foreground-rgb));
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--foreground-rgb));
 }
 
 @layer utilities {
-	.text-balance {
-		text-wrap: balance;
-	}
+  .text-balance {
+    text-wrap: balance;
+  }
 }
