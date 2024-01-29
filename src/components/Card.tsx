@@ -23,7 +23,7 @@ const Card = ({ title, link, image, icon, className }: CardProps) => {
 			<img
 				src={image}
 				alt={title + ' image'}
-				className='absolute -z-10 h-full w-full rounded-3xl'
+				className='absolute -z-10 h-full w-full rounded-3xl object-cover'
 			/>
 			{icon && (
 				<img

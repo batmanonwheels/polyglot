@@ -26,7 +26,7 @@ const FeaturedLesson = ({
 			<img
 				src={image}
 				alt={title + ' image'}
-				className='absolute -z-10 h-full w-full rounded-3xl'
+				className='absolute -z-10 h-full w-full rounded-3xl object-cover'
 			/>
 			<div className='row-span-1 col-span-2 flex flex-col gap-2 text-left h-fit'>
 				<h2 className='text-3xl font-bold md:text-8xl'>{title}</h2>
