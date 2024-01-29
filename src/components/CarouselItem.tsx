@@ -27,16 +27,16 @@ const CarouselItem = ({
 			<Link
 				href={link ? link : ''}
 				className={cn(
-					'flex aspect-[3/2] h-3/4 snap-center flex-col gap-1 text-center ',
+					'flex snap-center flex-col gap-1 text-center align-middle h-28',
 					className
 				)}
 			>
 				<img
 					src={image}
 					alt={title + ' image'}
-					className='h-full w-full rounded-xl border '
+					className='w-full rounded-xl border object-cover'
 				/>
-				<h2 className='w-full'>{title}</h2>
+				<h2 className='w-full text-sm'>{title}</h2>
 			</Link>
 		);
 	}
@@ -49,7 +49,7 @@ const CarouselItem = ({
 			<img
 				src={image}
 				alt={title}
-				className='absolute -z-10 h-full w-full rounded-3xl'
+				className='absolute -z-10 h-full w-full rounded-3xl object-cover'
 			/>
 			{icon && (
 				<img

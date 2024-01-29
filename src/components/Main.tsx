@@ -9,7 +9,7 @@ const Main = ({ className, children }: MainProps) => {
 	return (
 		<main
 			className={cn(
-				'relative flex max-h-[100svh] max-w-[100vw] flex-col justify-between overflow-hidden md:max-h-none',
+				'relative flex max-h-[100svh] max-w-[100vw] flex-col justify-between md:max-h-none',
 				className
 			)}
 		>

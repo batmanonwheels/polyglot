@@ -6,6 +6,10 @@ import Content from '@/components/Content';
 import Main from '@/components/Main';
 import Footer from '@/components/Footer';
 import { Metadata } from 'next';
+import conversation from '../../../public/images/review/Conversation.svg';
+import listen from '../../../public/images/review/Listen.svg';
+import mistakes from '../../../public/images/review/Mistakes.svg';
+import vocabList from '../../../public/images/review/VocabList.svg';
 
 export const metadata: Metadata = {
 	title: 'Review | Polyglot',
@@ -34,12 +38,12 @@ export default function Review() {
 						<Card
 							className='h-1/2 md:h-3/4 md:w-1/2'
 							title='Conversation'
-							image='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-7iWgixkGSzAHt8VnqoPJdRW-e-UqHLgm-GfUC9CywA&s'
+							image={conversation.src}
 						/>
 						<Card
 							className='h-1/2 md:h-3/4  md:w-1/2'
 							title='Listen'
-							image='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-7iWgixkGSzAHt8VnqoPJdRW-e-UqHLgm-GfUC9CywA&s'
+							image={listen.src}
 						/>
 					</div>
 				</div>
@@ -51,12 +55,12 @@ export default function Review() {
 						<Card
 							className='h-1/2 md:h-3/4  md:w-1/2'
 							title='Vocab list'
-							image='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-7iWgixkGSzAHt8VnqoPJdRW-e-UqHLgm-GfUC9CywA&s'
+							image={vocabList.src}
 						/>
 						<Card
 							className='h-1/2 md:h-3/4  md:w-1/2'
 							title='Mistakes'
-							image='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-7iWgixkGSzAHt8VnqoPJdRW-e-UqHLgm-GfUC9CywA&s'
+							image={mistakes.src}
 						/>
 					</div>
 				</div>
