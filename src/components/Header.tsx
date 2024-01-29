@@ -51,7 +51,7 @@ const Header = ({ text, profile }: HeaderProps) => {
 
 	return (
 		<>
-			<header className='hidden z-20 h-16 w-full items-center justify-between px-5 py-4 pb-5 md:flex md:mx-auto md:h-20 md:flex-col md:px-10 md:sticky md:top-0 bg-white'>
+			<header className='hidden z-20 h-16 w-full items-center justify-between px-5 py-4 pb-5 md:flex md:mx-auto md:h-20 md:flex-col xl:px-10 md:sticky md:top-0 bg-white'>
 				<div className='hidden justify-between gap-4 items-center w-full bg-white md:flex'>
 					<div className='justify-between gap-4 flex bg-white'>
 						{buttons.map(({ link, icon, title }, i) => (
